@@ -31,11 +31,11 @@ class driver;
       `DRIV_ITF.io_miso_s <= 8'b0;
       if (trans.data_config[24] == 0) begin
         for (int i = 0; i < 8; i++) begin  
-          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[7-i];
+          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[i];
         end
       end else begin
         for (int i = 0; i < 8; i++) begin
-          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[i];
+          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[7-i];
         end
       end
       trans.interupt_request = `DRIV_ITF.interupt_request;
