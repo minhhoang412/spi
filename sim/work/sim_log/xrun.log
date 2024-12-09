@@ -1,5 +1,5 @@
 xrun(64): 22.09-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s004: Started on Dec 09, 2024 at 13:21:59 +07
+TOOL:	xrun(64)	22.09-s004: Started on Dec 09, 2024 at 13:28:21 +07
 xrun
 	-sv
 	-64bit
@@ -98,4 +98,4 @@ Simulation complete via $finish(1) at time 3825 NS + 3
 xcelium> assertion -summary -show all
   No assertions found.
 xcelium> exit
-TOOL:	xrun(64)	22.09-s004: Exiting on Dec 09, 2024 at 13:22:00 +07  (total: 00:00:01)
+TOOL:	xrun(64)	22.09-s004: Exiting on Dec 09, 2024 at 13:28:24 +07  (total: 00:00:03)
