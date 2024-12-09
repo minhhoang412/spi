@@ -1,4 +1,4 @@
-`include "${DIR_TB}/transaction.sv"
+`include "transaction.sv"
 class generator;
   rand transaction trans, tr;
   int repeat_count;

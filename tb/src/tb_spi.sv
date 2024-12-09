@@ -1,7 +1,7 @@
 
 //`include "/home/DN06/DV_DIR/01.Uyen/prj_intern/SPI/rtl/spi_module.v"
-`include "${DIR_TB}/interface.sv"
-`include "${DIR_TB}/test_slave_change_msb_lsb.sv"
+`include "interface.sv"
+`include "test_slave_change_msb_lsb.sv"
 
 module tb_spi;
   bit clk;
@@ -41,4 +41,7 @@ module tb_spi;
   end
 
 endmodule
+
+
+
 

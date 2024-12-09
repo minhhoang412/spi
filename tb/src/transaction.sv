@@ -31,7 +31,3 @@ class transaction;
 
 endclass
 `endif
-
-
-
-

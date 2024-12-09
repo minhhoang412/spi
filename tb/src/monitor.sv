@@ -1,4 +1,4 @@
-`include "${DIR_TB}/transaction.sv"
+`include "transaction.sv"
 class monitor;
   virtual itf_spi_env i_spi;
 
@@ -12,6 +12,7 @@ class monitor;
     forever begin
       transaction trans;
       trans = new();
+      
       @(posedge i_spi.clk);
       wait (!i_spi.SS);
       trans.i_data_p = i_spi.i_data_p;

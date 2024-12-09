@@ -1,8 +1,8 @@
-`include "${DIR_TB}/transaction.sv"
-`include "${DIR_TB}/generator.sv"
-`include "${DIR_TB}/driver.sv"
-`include "${DIR_TB}/scoreboard.sv"
-`include "${DIR_TB}/monitor.sv"
+`include "transaction.sv"
+`include "generator.sv"
+`include "driver.sv"
+`include "scoreboard.sv"
+`include "monitor.sv"
 
 class enviroment;
 

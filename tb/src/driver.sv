@@ -1,4 +1,4 @@
-`include "${DIR_TB}/transaction.sv"
+`include "transaction.sv"
 `define DRIV_ITF i_spi.DRIVER.driver_cb
 class driver;
   int no_transaction;
@@ -30,12 +30,12 @@ class driver;
       `DRIV_ITF.trans_en  <= 1'b1;
       `DRIV_ITF.io_miso_s <= 8'b0;
       if (trans.data_config[24] == 0) begin
-        for (int i = 0; i < 8; i++) begin  
-          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[i];
+        for (int i = 0; i < 8; i++) begin
+          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[7-i];
         end
       end else begin
         for (int i = 0; i < 8; i++) begin
-          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[7-i];
+          @(negedge i_spi.SCK) `DRIV_ITF.io_miso_s <= trans.i_data_s[i];
         end
       end
       trans.interupt_request = `DRIV_ITF.interupt_request;
@@ -46,7 +46,7 @@ class driver;
       `DRIV_ITF.SS <= 1'b1;
       repeat (10) @(i_spi.DRIVER.clk);
       `DRIV_ITF.io_mosi_s <= 1'b0;
-      `DRIV_ITF.i_data_p <= trans.i_data_p;
+      `DRIV_ITF.i_data_p <= trans.i_data_p; 
       `DRIV_ITF.SS <= 1'b0;
       for (int i = 0; i < 8; i++) begin
         `DRIV_ITF.SCK <= 1'b0;

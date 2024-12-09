@@ -1,4 +1,5 @@
 `include "${DIR_TB}/transaction.sv"
+
 class scoreboard;
   mailbox mon2scb;
   int no_transaction;
