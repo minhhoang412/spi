@@ -1,4 +1,4 @@
-`include "${DIR_TB}/transaction.sv"
+`include "transaction.sv"
 
 class scoreboard;
   mailbox mon2scb;

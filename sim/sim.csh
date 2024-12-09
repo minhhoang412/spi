@@ -69,11 +69,6 @@ endif
 cp -rf ${RTL_COMP_DIR}/xcelium.d ./
 xrun \
     -sv \
-    -compile \
-    -64bit \
-    -work $worklib \
-    -uvm \
-    -uvmhome CDNS-1.1d \
     -incdir ${DIR_TB} \
     -f ${TB_LIST} 
 
@@ -82,11 +77,7 @@ xrun \
 xrun \
     -sv \
     -64bit \
-    -work $worklib \
-    -disable_sem2009 \
-    -top tb_spi \
     +access+rwc \
-    -disable_sem2009 \
     -INPUT wave.tcl \
     -incdir ${DIR_TB} \
     -f ${TB_LIST}
