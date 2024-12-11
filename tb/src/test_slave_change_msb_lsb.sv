@@ -1,5 +1,5 @@
 
-include "enviroment.sv"
+`include "enviroment.sv"
 
 program test (
     itf_spi_env i_spi

@@ -1,7 +1,6 @@
 
-//`include "/home/DN06/DV_DIR/01.Uyen/prj_intern/SPI/rtl/spi_module.v"
 `include "interface.sv"
-`include "test_slave.sv"
+`include "test_slave_change_msb_lsb.sv"
 
 module tb_spi;
   bit clk;
