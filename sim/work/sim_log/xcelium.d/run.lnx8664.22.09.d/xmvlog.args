@@ -7,8 +7,8 @@
 -RUNMODE
 -sv
 -INCDIR
-/home/DN01/Hoang/spi/sim/../tb/src
-/home/DN01/Hoang/spi/sim/../tb/src/tb_spi.sv
+/home/DN01/hoang/spi/sim/../tb/src
+/home/DN01/hoang/spi/sim/../tb/src/tb_spi.sv
 -CDSLIB
 ./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
 -HDLVAR

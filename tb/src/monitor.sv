@@ -33,9 +33,9 @@ class monitor;
       end else begin
         if (trans.data_config[24] == 0) begin
           for (int i = 0; i < 8; i++) begin
-            @(posedge i_spi.SCK) trans.o_data_s[i] = i_spi.io_miso_s;
-            @(negedge i_spi.SCK) trans.i_data_s[i] = i_spi.io_mosi_s;
-          end
+            @(posedge i_spi.SCK)  trans.o_data_s[i] = i_spi.io_miso_s;
+            @(negedge i_spi.SCK)  trans.i_data_s[i] = i_spi.io_mosi_s;
+	end
         end else begin
           for (int i = 0; i < 8; i++) begin
             @(posedge i_spi.SCK) trans.o_data_s[7-i] = i_spi.io_miso_s;

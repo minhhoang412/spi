@@ -4,6 +4,6 @@
 //
 -sv
 -incdir
-/home/DN01/Hoang/spi/sim/../tb/src
+/home/DN01/hoang/spi/sim/../tb/src
 -f
-/home/DN01/Hoang/spi/sim/../tb/list/list_tb.txt
+/home/DN01/hoang/spi/sim/../tb/list/list_tb.txt
