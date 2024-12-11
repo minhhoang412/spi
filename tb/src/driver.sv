@@ -46,20 +46,20 @@ class driver;
       `DRIV_ITF.SS <= 1'b1;
       repeat (10) @(i_spi.DRIVER.clk);
       `DRIV_ITF.io_mosi_s <= 1'b0;
-      `DRIV_ITF.i_data_p <= trans.i_data_p; 
+      `DRIV_ITF.i_data_p <= trans.i_data_p;
       `DRIV_ITF.SS <= 1'b0;
       for (int i = 0; i < 8; i++) begin
         `DRIV_ITF.SCK <= 1'b0;
         @(posedge i_spi.DRIVER.clk);
         @(posedge i_spi.DRIVER.clk);
         `DRIV_ITF.SCK <= 1'b1;
-        @(posedge i_spi.DRIVER.clk);
-        @(posedge i_spi.DRIVER.clk);
         if (trans.data_config[24] == 0) begin  // trans msb or lsb
           `DRIV_ITF.io_mosi_s <= trans.i_data_s[7-i];
         end else begin
           `DRIV_ITF.io_mosi_s <= trans.i_data_s[i];
         end
+        @(posedge i_spi.DRIVER.clk);
+        @(posedge i_spi.DRIVER.clk);
       end
       `DRIV_ITF.SCK <= 1'b0;
       `DRIV_ITF.SS  <= 1'b1;
