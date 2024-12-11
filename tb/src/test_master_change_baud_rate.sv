@@ -13,11 +13,11 @@ program test (
     bit              SPE       = 1'b1;  //system enable
     bit              CPOL      = 1'b0;  //mode clock-high when off
     bit              CPHA      = 1'b1;  //mode - just setup 1
-    bit              LSBFE     = 1'b0;  // first MSB or LSB
     bit              MSTR_M    = 1'b1;  //master
     bit              MSTR_S    = 1'b0;  //slave
     bit              SSOE_M    = 1'b1;  //ONLY 1
     bit              SSOE_S    = 1'b0;  //ONLY 0
+    bit              LSBFE     = 1'b0;  // first MSB or LSB
     //R2
     bit              SPISWAI   = 1'b0;  //save power
     bit              SPCO      = 1'b0;  //setup bidirection

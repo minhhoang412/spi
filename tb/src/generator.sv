@@ -3,11 +3,9 @@ class generator;
   rand transaction trans, tr;
   int repeat_count;
   mailbox gen2driv;
- // mailbox gen2mon; //dev
   event ended;
   function new(mailbox gen2driv, event ended);
     this.gen2driv = gen2driv;
-  //  this.gen2mon = gen2mon; //dev
     this.ended = ended;
     trans = new();
   endfunction
@@ -19,10 +17,9 @@ class generator;
       end 
       tr = trans.copy_data();
       gen2driv.put(tr);
-   //   gen2mon.put(tr); //dev
 
     end
-    ->ended;  //done create generator
+    ->ended;  
   endtask
 
 endclass
