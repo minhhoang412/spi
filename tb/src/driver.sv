@@ -62,6 +62,7 @@ class driver;
         end
       end
       `DRIV_ITF.SCK <= 1'b0;
+      #20;
       `DRIV_ITF.SS  <= 1'b1;
       no_transaction++;
     end
