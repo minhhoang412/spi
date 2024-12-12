@@ -61,7 +61,6 @@ program test (
     env = new(i_spi);
     env.gen.repeat_count = 10;
     my_tr = new();
-
     env.gen.trans = my_tr;
     env.run();
   end
