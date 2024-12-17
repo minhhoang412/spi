@@ -1,14 +1,14 @@
 xrun(64): 22.09-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s004: Started on Dec 11, 2024 at 09:33:52 +07
+TOOL:	xrun(64)	22.09-s004: Started on Dec 14, 2024 at 20:39:11 +07
 xrun
 	-sv
 	-64bit
 	+access+rwc
 	-INPUT wave.tcl
-	-incdir /home/DN01/hoang/spi/sim/../tb/src
-	-f /home/DN01/hoang/spi/sim/../tb/list/list_tb.txt
-		/home/DN01/hoang/spi/sim/../tb/src/tb_spi.sv
-file: /home/DN01/hoang/spi/sim/../tb/src/tb_spi.sv
+	-incdir /home/DN01/hoang2/spi/sim/../tb/src
+	-f /home/DN01/hoang2/spi/sim/../tb/list/list_tb.txt
+		/home/DN01/hoang2/spi/sim/../tb/src/tb_spi.sv
+file: /home/DN01/hoang2/spi/sim/../tb/src/tb_spi.sv
 	interface worklib.itf_spi_env:sv
 		errors: 0, warnings: 0
 	program worklib.test:sv
@@ -19,23 +19,23 @@ file: /home/DN01/hoang/spi/sim/../tb/src/tb_spi.sv
 	Elaborating the design hierarchy:
 		Caching library 'worklib' ....... Done
 	Top level design units:
-		$unit_0x4e2f618e
+		$unit_0x3675c7e9
 		tb_spi
 xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
 	Building instance overlay tables: ........
         $fatal("trans randomize is failed");
                                          |
-xmelab: *W,STRINT (/home/DN01/hoang/spi/tb/src/generator.sv,18|41): String literal argument supplied to integer parameter.
+xmelab: *W,STRINT (/home/DN01/hoang2/spi/tb/src/generator.sv,16|41): String literal argument supplied to integer parameter.
 ............ Done
 	Generating native compiled code:
-		worklib.spi_module:v <0x2c79f56f>
-			streams:  20, words: 14829
-		worklib.tb_spi:sv <0x48501fc3>
+		worklib.spi_module:v <0x0e4d4d0c>
+			streams:  37, words: 18587
+		worklib.tb_spi:sv <0x737e6b50>
 			streams:  10, words:  3209
-		worklib.test:sv <0x3f74b4b8>
-			streams:   7, words:  6223
-		worklib.itf_spi_env:sv <0x198e06d1>
-			streams:  77, words: 106136
+		worklib.test:sv <0x37861abe>
+			streams:   7, words:  6313
+		worklib.itf_spi_env:sv <0x7a883ea0>
+			streams:  77, words: 101893
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -43,7 +43,7 @@ xmelab: *W,STRINT (/home/DN01/hoang/spi/tb/src/generator.sv,18|41): String liter
 		Modules:                    2       2
 		Interfaces:                 1       1
 		Programs:                   1       1
-		Registers:                 73     117
+		Registers:                 72     116
 		Scalar wires:              14       -
 		Vectored wires:             4       -
 		Named events:               1       3
@@ -52,7 +52,7 @@ xmelab: *W,STRINT (/home/DN01/hoang/spi/tb/src/generator.sv,18|41): String liter
 		Clocking blocks:            1       1
 		Clocking items:             9       9
 		Parallel blocks:            2       2
-		Cont. assignments:          5       6
+		Cont. assignments:          5       7
 		Pseudo assignments:         7       7
 		Compilation units:          1       1
 		SV Class declarations:      7       7
@@ -72,30 +72,12 @@ xmsim: *SE,PNOOBJ: Path element could not be found: testbench.
 xmsim: *SE,PNOOBJ: Path element could not be found: testbench.
 xmsim: *SE,PRNFND: No items are probed because no objects were found that match any specified name.
 xcelium> run
-before get from scb
-time: 405 [PASSED] i_data_p: 06, i_data_s: 70, o_data_p  : 70, o_data_s: 06
-before get from scb
-time: 785 [PASSED] i_data_p: 8f, i_data_s: f7, o_data_p  : f7, o_data_s: 8f
-before get from scb
-time: 1165 [PASSED] i_data_p: 44, i_data_s: dc, o_data_p  : dc, o_data_s: 44
-before get from scb
-time: 1545 [PASSED] i_data_p: bb, i_data_s: c1, o_data_p  : c1, o_data_s: bb
-before get from scb
-time: 1925 [PASSED] i_data_p: 63, i_data_s: 2d, o_data_p  : 2d, o_data_s: 63
-before get from scb
-time: 2305 [PASSED] i_data_p: 25, i_data_s: 48, o_data_p  : 48, o_data_s: 25
-before get from scb
-time: 2685 [PASSED] i_data_p: cd, i_data_s: 8b, o_data_p  : 8b, o_data_s: cd
-before get from scb
-time: 3065 [PASSED] i_data_p: 82, i_data_s: b4, o_data_p  : b4, o_data_s: 82
-before get from scb
-time: 3445 [PASSED] i_data_p: f9, i_data_s: 63, o_data_p  : 63, o_data_s: f9
-before get from scb
-time: 3825 [PASSED] i_data_p: ae, i_data_s: 12, o_data_p  : 12, o_data_s: ae
-before get from scb
-Simulation complete via $finish(1) at time 3825 NS + 3
-/home/DN01/hoang/spi/tb/src/enviroment.sv:56     $finish;
-xcelium> assertion -summary -show all
-  No assertions found.
-xcelium> exit
-TOOL:	xrun(64)	22.09-s004: Exiting on Dec 11, 2024 at 09:33:54 +07  (total: 00:00:02)
+time: 405 [PASSED] i_data_p: 06, i_data_s: 0e, o_data_p  : 0e, o_data_s: 06
+time: 865 [PASSED] i_data_p: 8f, i_data_s: ef, o_data_p  : ef, o_data_s: 8f
+time: 1325 [PASSED] i_data_p: 44, i_data_s: 3b, o_data_p  : 3b, o_data_s: 44
+time: 1785 [PASSED] i_data_p: bb, i_data_s: 83, o_data_p  : 83, o_data_s: bb
+time: 2245 [PASSED] i_data_p: 63, i_data_s: b4, o_data_p  : b4, o_data_s: 63
+time: 2705 [PASSED] i_data_p: 25, i_data_s: 12, o_data_p  : 12, o_data_s: 25
+time: 84765 [FAILED] i_data_p: cd, i_data_s: d1, o_data_p  : 51, o_data_s: cd
+xmsim: *W,NCTERM: Simulation received SIGTERM signal from process 1, user id 0 (/usr/lib/systemd/systemd).
+TOOL:	xrun(64)	22.09-s004: Exiting on Dec 14, 2024 at 22:00:03 +07  (total: 01:20:52)

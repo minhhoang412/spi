@@ -8,6 +8,6 @@
 -work
 worklib
 -f
-/home/DN01/Hoang/spi/sim/../tb/list/list_rtl.txt
+/home/DN01/hoang2/spi/sim/../tb/list/list_rtl.txt
 -log_xmvlog
 rtl_compile.log

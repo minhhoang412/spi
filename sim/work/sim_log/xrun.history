@@ -3,5 +3,6 @@ s2(09Dec2024:11:16:17):  xrun -compile -sv -64bit -work worklib -f /home/DN01/Ho
 s3(09Dec2024:12:03:50):  xrun -compile -sv -64bit -work worklib -f /home/DN01/Hoang/spi/sim/../tb/list/list_rtl.txt -log_xmvlog rtl_compile.log 
 s4(09Dec2024:12:04:49):  xrun -compile -sv -64bit -work worklib -f /home/DN01/Hoang/spi/sim/../tb/list/list_rtl.txt -log_xmvlog rtl_compile.log 
 s5(09Dec2024:13:09:48):  xrun -compile -sv -64bit -work worklib -f /home/DN01/Hoang/spi/sim/../tb/list/list_rtl.txt -log_xmvlog rtl_compile.log 
-s6(11Dec2024:09:33:51):  xrun -sv -incdir /home/DN01/hoang/spi/sim/../tb/src -f /home/DN01/hoang/spi/sim/../tb/list/list_tb.txt 
-s7(11Dec2024:09:33:53):  xrun -sv -64bit +access+rwc -INPUT wave.tcl -incdir /home/DN01/hoang/spi/sim/../tb/src -f /home/DN01/hoang/spi/sim/../tb/list/list_tb.txt 
+s6(14Dec2024:14:34:14):  xrun -compile -sv -64bit -work worklib -f /home/DN01/hoang2/spi/sim/../tb/list/list_rtl.txt -log_xmvlog rtl_compile.log 
+s7(14Dec2024:20:39:10):  xrun -sv -incdir /home/DN01/hoang2/spi/sim/../tb/src -f /home/DN01/hoang2/spi/sim/../tb/list/list_tb.txt 
+s8(14Dec2024:20:39:11):  xrun -sv -64bit +access+rwc -INPUT wave.tcl -incdir /home/DN01/hoang2/spi/sim/../tb/src -f /home/DN01/hoang2/spi/sim/../tb/list/list_tb.txt 

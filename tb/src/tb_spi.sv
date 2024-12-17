@@ -1,6 +1,6 @@
 
 `include "interface.sv"
-`include "test_slave_change_msb_lsb.sv"
+`include "test_master_baudrate.sv"
 
 module tb_spi;
   bit clk;

@@ -8,7 +8,7 @@
 -sv
 -WORK
 worklib
-/home/DN01/Hoang/spi/sim/../rtl/spi_module.v
+/home/DN01/hoang2/spi/sim/../rtl/spi_module.v
 -CDSLIB
 ./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
 -HDLVAR

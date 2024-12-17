@@ -1,1 +1,2 @@
-1733884428 /home/DN01/hoang/spi/tb/src/tb_spi.sv
+1734161607 /home/DN01/hoang2/spi/rtl/spi_module.v
+1734182202 /home/DN01/hoang2/spi/tb/src/tb_spi.sv

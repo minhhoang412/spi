@@ -9,7 +9,6 @@ class scoreboard;
   task main;
     transaction trans;
     forever begin
-      $display("before get from scb");
       mon2scb.get(trans);
           if ((trans.i_data_p == trans.o_data_s) && (trans.i_data_s == trans.o_data_p)) begin
             trans.display("PASSED");
@@ -23,3 +22,4 @@ class scoreboard;
 
 
 endclass
+

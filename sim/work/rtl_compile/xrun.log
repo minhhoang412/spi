@@ -1,15 +1,12 @@
 xrun(64): 22.09-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	22.09-s004: Started on Dec 09, 2024 at 13:09:48 +07
+TOOL:	xrun(64)	22.09-s004: Started on Dec 14, 2024 at 14:34:14 +07
 xrun
 	-compile
 	-sv
 	-64bit
 	-work worklib
-	-f /home/DN01/Hoang/spi/sim/../tb/list/list_rtl.txt
-		/home/DN01/Hoang/spi/sim/../rtl/spi_module.v
+	-f /home/DN01/hoang2/spi/sim/../tb/list/list_rtl.txt
+		/home/DN01/hoang2/spi/sim/../rtl/spi_module.v
 	-log_xmvlog rtl_compile.log
-Recompiling... reason: file '/home/DN01/Hoang/spi/rtl/spi_module.v' is newer than expected.
-	expected: Mon Dec  9 12:04:02 2024
-	actual:   Mon Dec  9 13:09:27 2024
 Output for xmvlog is being redirected to rtl_compile.log
-TOOL:	xrun(64)	22.09-s004: Exiting on Dec 09, 2024 at 13:09:48 +07  (total: 00:00:00)
+TOOL:	xrun(64)	22.09-s004: Exiting on Dec 14, 2024 at 14:34:14 +07  (total: 00:00:00)

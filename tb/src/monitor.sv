@@ -17,28 +17,33 @@ class monitor;
       wait (!i_spi.SS);
       trans.i_data_p = i_spi.i_data_p;
       trans.data_config = i_spi.data_config;
+
       if (trans.data_config[28] == 1) begin
         if (trans.data_config[24] == 0) begin
           for (int i = 0; i < 8; i++) begin
             @(posedge i_spi.SCK) trans.o_data_s[i] = i_spi.io_mosi_s;
-            @(negedge i_spi.SCK) trans.i_data_s[i] = i_spi.io_miso_s;
+            #1;
+            trans.i_data_s[i] = i_spi.io_miso_s;
           end
         end else begin
           for (int i = 0; i < 8; i++) begin
             @(posedge i_spi.SCK) trans.o_data_s[7-i] = i_spi.io_mosi_s;
-            @(negedge i_spi.SCK) trans.i_data_s[7-i] = i_spi.io_miso_s;
+            #1;
+            trans.i_data_s[7-i] = i_spi.io_miso_s;
           end
         end
       end else begin
         if (trans.data_config[24] == 0) begin
           for (int i = 0; i < 8; i++) begin
             @(posedge i_spi.SCK) trans.o_data_s[i] = i_spi.io_miso_s;
-            @(negedge i_spi.SCK) trans.i_data_s[i] = i_spi.io_mosi_s;
+            #1;
+            trans.i_data_s[i] = i_spi.io_mosi_s;
           end
         end else begin
           for (int i = 0; i < 8; i++) begin
             @(posedge i_spi.SCK) trans.o_data_s[7-i] = i_spi.io_miso_s;
-            @(negedge i_spi.SCK) trans.i_data_s[7-i] = i_spi.io_mosi_s;
+            #1;
+            trans.i_data_s[7-i] = i_spi.io_mosi_s;
           end
         end
       end
@@ -53,4 +58,5 @@ class monitor;
   endtask
 
 endclass
+
 
