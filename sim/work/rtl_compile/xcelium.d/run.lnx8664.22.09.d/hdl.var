@@ -1,6 +1,0 @@
-define XMSIMRC	( /mnt/CADENCE/xcelium_2209/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
-define AMSRC	( /mnt/CADENCE/xcelium_2209/tools/xcelium/files/amsrc, ~/.amsrc )
-include ./hdlrun.var
-define SNAPSHOT worklib.spi_module:v
-DEFINE RUNMODEDEFAULT 1
-DEFINE LIB_MAP ( + => worklib )

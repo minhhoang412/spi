@@ -1,9 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-//
--sv
--incdir
-/home/DN01/hoang2/spi/sim/../tb/src
--f
-/home/DN01/hoang2/spi/sim/../tb/list/list_tb.txt
