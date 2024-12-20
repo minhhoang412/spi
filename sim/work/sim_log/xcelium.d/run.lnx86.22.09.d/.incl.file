@@ -1,0 +1,8 @@
+./interface.sv
+./test_slave_transmission.sv
+./enviroment.sv
+./transaction.sv
+./generator.sv
+./driver.sv
+./scoreboard.sv
+./monitor.sv
